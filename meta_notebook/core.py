@@ -19,7 +19,7 @@ def print_vars(self: CaptureShell):
 @patch
 def run_cells(self: CaptureShell, cells):
     for cell in cells:
-        cs.cell(cell)
+        self.cell(cell)
 
 class VarManager():
     def __init__(self, cs):
