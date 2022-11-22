@@ -21,7 +21,7 @@ def run_cells(self: CaptureShell, cells):
     for cell in cells:
         self.cell(cell)
         if hasattr(cell, 'outputs') and len(cell.outputs) > 0 and cell.outputs[0].output_type == 'error':
-            raise RuntimeError(f'{cell.outputs[0].ename}: {cell.outputs[0].evalue}')
+            raise RuntimeError(f'#{cell["idx_"]}: {cell.outputs[0].ename} {cell.outputs[0].evalue}')
 
 class VarManager():
     def __init__(self, cs):
