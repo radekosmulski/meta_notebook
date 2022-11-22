@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "meta_notebook"
+  site-url: "https://radekosmulski.github.io/meta_notebook"
+  description: "Treat Jupyter notebooks as lego bricks and create something beautiful."
+  repo-branch: main
+  repo-url: "https://github.com/radekosmulski/meta_notebook"
