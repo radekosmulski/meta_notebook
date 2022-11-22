@@ -13,7 +13,7 @@ from fastcore.all import *
 @patch
 def print_vars(self: CaptureShell):
     '''print user defined variables'''
-    names = list(cs.user_global_ns.keys())[18:]
+    names = list(self.user_global_ns.keys())[18:]
     print(sorted(names))
     
 @patch
