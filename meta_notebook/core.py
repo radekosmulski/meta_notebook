@@ -20,6 +20,8 @@ def print_vars(self: CaptureShell):
 def run_cells(self: CaptureShell, cells):
     for cell in cells:
         self.cell(cell)
+        if hasattr(cell, 'outputs') and len(cell.outputs) > 0 and cell.outputs[0].output_type == 'error':
+            raise RuntimeError(f'{cell.outputs[0].ename}: {cell.outputs[0].evalue}')
 
 class VarManager():
     def __init__(self, cs):
@@ -38,7 +40,7 @@ class CaptureShellExt(CaptureShell):
         super().__init__()
         self.var = VarManager(self) 
 
-# %% ../nbs/00_core.ipynb 5
+# %% ../nbs/00_core.ipynb 7
 class Notebook():
     def __init__(self, path):
         self.nb = read_nb(path)
