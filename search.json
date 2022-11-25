@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "meta_notebook",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "meta_notebook",
+    "section": "Install",
+    "text": "Install\npip install meta_notebook"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "meta_notebook",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2"
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nCaptureShellExt\n\n CaptureShellExt ()\n\nCaptureShell with additional functionality\n\nsource\n\n\nVarManager\n\n VarManager (cs)\n\nInitialize self. See help(type(self)) for accurate signature.\n\nsource\n\n\nCaptureShell.run_cells\n\n CaptureShell.run_cells (cells)\n\n\nsource\n\n\nCaptureShell.print_vars\n\n CaptureShell.print_vars ()\n\nprint user defined variables\nrun_cells stop execution on an error and raises an error with an informative message\n\nnb = new_nb(cells=[mk_cell('a = 1'), mk_cell('a / 0'), mk_cell('print(\"hi\")')])\ncs = CaptureShell()\n\ntest_fail(lambda: cs.run_cells(nb.cells), contains='ZeroDivisionError')\n\n\nsource\n\n\nNotebook\n\n Notebook (path)\n\nInitialize self. See help(type(self)) for accurate signature."
+  }
+]
