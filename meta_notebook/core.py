@@ -54,9 +54,13 @@ class Notebook():
         for i, cell in enumerate(self.cells):
             if tag in cell.source:
                 return i
+        
+    def run_to(self, tag):
+        '''runs the cells from the beginning of the notebook to `tag` (inclusive of tag)'''
+        return self.cells[:self.find(tag)+1]
     
-    def to(self, tag):
-        '''runs the cells from `tag` to the end of the notebook'''
+    def run_from(self, tag):
+        '''runs the cells from `tag` to the end of the notebook  (inclusive of tag)'''
         return self.cells[self.find(tag):]
     
     def between(self, tag1, tag2):
