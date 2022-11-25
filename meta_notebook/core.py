@@ -60,6 +60,7 @@ class Notebook():
         return self.cells[self.find(tag):]
     
     def between(self, tag1, tag2):
+        '''return cells between frist occurrence of `tag1` and `tag2` (inclusive of endpoints)'''
         tag1_pos = self.find(tag1)
         tag2_pos = self.find(tag2)
         
