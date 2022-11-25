@@ -49,13 +49,15 @@ class Notebook():
     def cells(self):
         return self.nb.cells
     
-    def find(self, string):
+    def find(self, tag):
+        '''finds the first occurence of `tag` (any string) in the notebook'''
         for i, cell in enumerate(self.cells):
-            if string in cell.source:
+            if tag in cell.source:
                 return i
     
     def to(self, tag):
-        return self.cells[:self.find(tag)]
+        '''runs the cells from `tag` to the end of the notebook'''
+        return self.cells[self.find(tag):]
     
     def between(self, tag1, tag2):
         tag1_pos = self.find(tag1)
